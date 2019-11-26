@@ -13,8 +13,8 @@ class MyApp extends StatefulWidget {
   _MyAppState createState() => new _MyAppState();
 }
 
-var cardAspectRatio = 12.0 / 16.0;
-var widgetAspectRatio = cardAspectRatio * 1.2;
+  var cardAspectRatio = 12.0 / 16.0;
+  var widgetAspectRatio = cardAspectRatio * 1.2;
 
 class _MyAppState extends State<MyApp> {
   var currentPage = images.length - 1.0;
@@ -31,9 +31,7 @@ class _MyAppState extends State<MyApp> {
     return Container(
       decoration: BoxDecoration(
           gradient: LinearGradient(
-              colors: [
-            Color(0xFF1b1e44),
-            Color(0xFF2d3447),
+            colors: [Colors.deepPurple,Color(0xFF2d3447),
           ],
               begin: Alignment.bottomCenter,
               end: Alignment.topCenter,
@@ -73,7 +71,7 @@ class _MyAppState extends State<MyApp> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Text("Trending",
+                    Text("Wallpapers",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 46.0,
@@ -137,7 +135,7 @@ class _MyAppState extends State<MyApp> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Text("Favourite",
+                    Text("Selected",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 46.0,
@@ -190,8 +188,7 @@ class _MyAppState extends State<MyApp> {
                     padding: EdgeInsets.only(left: 18.0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(20.0),
-                      child: Image.asset("assets/image_02.jpg",
-                          width: 296.0, height: 222.0),
+                      child: Image.asset("assets/image_02.jpg", width: 296.0, height: 222.0, fit: BoxFit.cover,),
                     ),
                   )
                 ],
